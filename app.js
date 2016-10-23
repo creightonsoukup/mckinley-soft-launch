@@ -1,14 +1,25 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Shopify = require('shopify-api-node');
+
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+var shopify = new Shopify({
+  shopName: 'madison-mckinley-designs-pre-launch',
+  apiKey: process.env.API_KEY,
+  password: process.env.PASSWORD
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

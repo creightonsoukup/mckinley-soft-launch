@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MyApp">
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
-  </head>
-  <body>
-    {{{body}}}
-    <script type="text/javascript" src="/javascripts/app.js"></script>
-    <script type="text/javascript" src="/javascripts/controller.js"></script>
-    <script type="text/javascript" src="/javascripts/directives.js"></script>
-    <script type="text/javascript" src="/javascripts/services.js"></script>
-    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- fullPage -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
+    <!-- Angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- ng-Route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.js"></script>
+    <!-- Shopify Buy SDK -->
     <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
 
+
+    <base href='/'>
+  </head>
+
+  <body ng-cloak>
+
+
+    <div id="site-wrapper">
+
+      <div id="site-canvas">
+          <ng-view></ng-view>
+          <shopping-cart></shopping-cart>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- <script src="env.js"></script> -->
+    <script type="text/javascript" src="/vendors/angular-fullpage.js/angular-fullpage.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.js"></script>
+    <script type="text/javascript" src="/javascripts/collection/collection.controller.js"></script>
+    <script type="text/javascript" src="/javascripts/collection/collection.services.js"></script>
+    <script type="text/javascript" src="/javascripts/collection/collection.directives.js"></script>
+    <script type="text/javascript" src="/javascripts/about/about.controller.js"></script>
+    <script type="text/javascript" src="/javascripts/about/about.directives.js"></script>
+    <script type="text/javascript" src="/javascripts/about/about.services.js"></script>
+    <script type="text/javascript" src="/javascripts/cart/cart.controller.js"></script>
+    <script type="text/javascript" src="/javascripts/cart/cart.service.js"></script>
+    <script type="text/javascript" src="/javascripts/services/shopify.js"></script>
+    <script type="text/javascript" src="/javascripts/singleproduct/singleproduct.controller.js"></script>
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
 
 
   </body>

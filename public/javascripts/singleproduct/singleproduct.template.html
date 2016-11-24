@@ -1,0 +1,6 @@
+<h1>{{view.product.attrs.title}}</h1>
+<h2>{{view.product["attrs"]["variants"][0]["price"]}}</h2>
+<form name="addToCartForm" ng-submit="view.addToCart(view.quantity)">
+  <input type="number" placeholder="quantity" ng-model="view.quantity">
+  <input type="submit" value="submit">
+</form>

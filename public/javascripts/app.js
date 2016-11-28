@@ -4,8 +4,7 @@ angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate', 'u
     $routeProvider
       .when('/', {
         templateUrl: '/javascripts/home/home.template.html',
-        controller: 'Home',
-        controllerAs: 'vm'
+        controller: 'Home'
       })
       .when('/collection', {
         templateUrl: '/javascripts/collection/collection.template.html',
@@ -13,7 +12,9 @@ angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate', 'u
       })
       .when('/about', {
         controller: 'About',
-        templateUrl: '/javascripts/about/about.template.html'
+        templateUrl: '/javascripts/about/about.template.html',
+        controllerAs: 'vm'
+
       })
       .when('/cart', {
         controller: 'Cart',

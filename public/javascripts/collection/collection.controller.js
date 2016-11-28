@@ -5,8 +5,17 @@ angular.module('MyApp')
     shopifyService.getProducts()
       .then((data) => {
         $scope.view.products = data.data
+        $scope.view.products.showDetails = false;
       })
       .catch(err => console.error(err))
-    // shopifyService.addToCart("Test 1", 4)
-    //   .then(data => $scope.view.cart 
+    shopifyService.getCart
+    $scope.view.toggle = ""
+    $scope.view.toggleClass = () => {
+      if ($scope.view.toggle === "") {
+        return $scope.view.toggle="show-nav"
+      } else {
+      return  $scope.view.toggle=""
+      }
+    }
+
   })

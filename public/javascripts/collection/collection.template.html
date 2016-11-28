@@ -1,28 +1,40 @@
-<div class="load">
-    <gs-nav-bar></gs-nav-bar>
-    <div class="hero-image">
+<div ng-class="view.toggle" id="site-wrapper">
+  <div id="site-canvas">
+    <div class="container-fluid hero-image">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+          <h3 class="logo3">MADISON MCKINLEY</h3>
+        </div>
+        <div class="col-md-1 col-md-offset-6">
+          <a id="hamburger"><i class="fa fa-bars" aria-hidden="true" ng-click="view.toggleClass()"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="filters" layout="row">
-        <div class="test" flex="33" layout="row" layout-align="space-around center">
-            <md-button class="filter-buttons">Necklaces</md-button>
-            <md-button class="filter-buttons">Braclets</md-button>
-            <md-button class="filter-buttons">Pendants</md-button>
-        </div>
-        <div flex="66">
-        </div>
-        <div flex="33">
-            <form action="">
-                <md-input-container>
-                    <input type="text">
-                </md-input-container>
-            </form>
-        </div>
-    </div>
-    <div class="products" layout="row" layout-wrap layout-padding layout-margin layout-fill layout-align="space-around center">
-        <div class="products" ng-repeat="n in view.products track by $index" layout="column" layout-align="space-around center">
+    <div class="product-container container-fluid">
+        <div ng-mouseenter="n.showDetails=true" ng-mouseleave="n.showDetails = false" class="products col-md-4" ng-repeat="n in view.products track by $index">
             <a href="http://localhost:8000/product/{{n.attrs.product_id}}"><img id="product-shots" ng-src="{{n.attrs.images[0].src}}" alt=""></a>
-            <p>{{n.attrs.title}}</p>
-            <p>{{n.attrs.variants[0].price}}</p>
+            <div ng-show="n.showDetails" class="container product-hover">
+              <a href="http://localhost:8000/product/{{n.attrs.product_id}}">
+              <p>{{n.attrs.title}}</p>
+              </a>
+              <p>{{n.attrs.variants[0].price}}</p>
+            </div>
         </div>
     </div>
+    <div id="site-menu">
+      <div class="container-fluid">
+        <ul class="social-icons nav navbar-nav">
+            <li><a href="https://www.instagram.com/madisonmckinleydesigns/"><i class="fa fa-instagram" aria-hidden="true"></i></a></h1>
+            <li><a href="https://www.facebook.com/Madison-Mckinley-Designs-104141666686791/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/madisonmcki2054/" ng-class="{}"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item"><a href="#">Collection</a></li>
+          <li class="nav-item"><a href="#">Charity</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

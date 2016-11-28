@@ -2,23 +2,42 @@ angular.module('MyApp')
 
   .service('shopifyService', function ($http, $q) {
       this.data = {}
-      this.getCart = () => $http.get('http://localhost:8000/cart')
-      this.requestAddToCart = (item) => {
-        console.log(item)
-        var data = $.param(item)
-        return $http.post('http://localhost:8000/addtocart', data)
-          // .success(console.log('successsss'))
+      this.data.cart
+      this.data.product
+      this.data.cartLineItemCount
+
+      this.getCart = () => {
+        if(localStorage.getItem('MckinleyCartId')) {
+          var cartId = localStorage.getItem('MckinleyCartId')
+          $http.post('/retrievecart', {cartId: cartId})
+            .success((remotecart) => {console.log(remotecart)})
+          // this.data.cartLineItemCount = this.data.cart.attrs.lineItems.length;
+    
+        } else {
+          $http.get('/newcart')
+            .then((newCart) => {
+              this.data.cart = newCart
+              console.log(this.data.cart)
+              localStorage.setItem('MckinleyCartId', this.data.cart.data["attrs"]["shopify-buy-uuid"])
+            })
         }
+      }
+
+      this.requestAddToCart = (variant, quantity) => {
+        return $http({
+          url: 'http://localhost:8000/addtocart',
+          data: {
+            variant: variant,
+            quantity: quantity
+          },
+          method: "POST"
+        })
+      }
+
       this.getProducts = () => $http.get('http://localhost:8000/products')
 
       this.getSingleProduct = (id) => $http.get('http://localhost:8000/singleproduct/' + id)
 
-      this.createLineItemObject = (variantObject, quantity) => {
-          var item = {}
-          item.variant = variantObject
-          item.quantity = quantity
-          return item
-      }
 
 
       // this.addToCart = ()

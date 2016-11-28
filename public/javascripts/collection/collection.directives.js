@@ -12,3 +12,4 @@ angular.module('MyApp')
       templateUrl: '../../partials/gsNavBar.html'
     }
   })
+  

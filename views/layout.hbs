@@ -3,8 +3,6 @@
   <head>
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS -->
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <!-- jQuery -->
@@ -22,24 +20,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.js"></script>
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <!-- Shopify Buy SDK -->
     <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+    <!-- Font -->
+    <link href="http://allfont.net/allfont.css?fonts=colonna-mt" rel="stylesheet" type="text/css" />
 
 
     <base href='/'>
   </head>
 
   <body ng-cloak>
-
-
-    <div id="site-wrapper">
-
-      <div id="site-canvas">
-          <ng-view></ng-view>
-          <shopping-cart></shopping-cart>
-      </div>
-
-    </div>
+      <!-- <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">MADISON MCKINLEY</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="hamburger"><a class="toggle-nav" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav> -->
+      <ng-view></ng-view>
 
 
 
@@ -58,6 +57,8 @@
     <script type="text/javascript" src="/javascripts/cart/cart.service.js"></script>
     <script type="text/javascript" src="/javascripts/services/shopify.js"></script>
     <script type="text/javascript" src="/javascripts/singleproduct/singleproduct.controller.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <script type="text/javascript" src="/javascripts/home/home.controller.js"></script>
     <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
 
 

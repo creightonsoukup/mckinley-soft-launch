@@ -411,7 +411,7 @@ html.fp-enabled,
 }
 
 #panel3 {
-  background-image: url("../images/placeholder3.jpeg");
+  background-image: url("../images/mads.jpg");
   background-size: cover;
   background-position: center;
 
@@ -423,6 +423,16 @@ html.fp-enabled,
   background-size: cover;
   background-position: center;
 
+}
+
+#single-product-hero img {
+  height: 50vh;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+#single-product-hero {
+  text-align: center;
 }
 
 
@@ -441,6 +451,7 @@ html.fp-enabled,
   font-size: 32px;
   margin: 0 auto;
   transform: translateX(-50%);
+  margin-top: 45vh;
 }
 
 #navigation-arrow-circle i {
@@ -557,6 +568,7 @@ body, html, main {
 .logo3 {
   font-family: 'Colonna MT', arial;
   padding-top: 5vh;
+  color: #B85741;
 }
 
 button {
@@ -568,4 +580,17 @@ button {
 
 #panel2 button {
   margin-top: 5vh;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  margin-top: 5vh;
+
+}
+
+.social-icons i {
+  justify-content: space-around;
+  color: #bb9872;
 }

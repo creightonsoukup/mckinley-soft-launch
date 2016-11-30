@@ -1,9 +1,6 @@
 angular.module('MyApp')
 
-
   .controller('About', function ($scope, $location) {
-
-
 
     var _this = this;
 

@@ -12,7 +12,7 @@ angular.module('MyApp')
           $http.post('/retrievecart', {cartId: cartId})
             .success((remotecart) => {console.log(remotecart)})
           // this.data.cartLineItemCount = this.data.cart.attrs.lineItems.length;
-    
+
         } else {
           $http.get('/newcart')
             .then((newCart) => {

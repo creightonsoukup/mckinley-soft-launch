@@ -12,6 +12,17 @@ angular.module('MyApp')
       .catch(err => console.error(err))
     $scope.view.addToCart = (variant, quantity) => {
       shopifyService.requestAddToCart(variant, quantity)
-        .success(console.log("success"))
+        .success(function(remoteCart) {
+          shopifyService.data.cart = remoteCart
+          
+        })
+    }
+    $scope.view.toggle = ""
+    $scope.view.toggleClass = () => {
+      if ($scope.view.toggle === "") {
+        return $scope.view.toggle="show-nav"
+      } else {
+      return  $scope.view.toggle=""
+      }
     }
   })

@@ -3,9 +3,6 @@ var router = express.Router();
 var Shopify = require('shopify-api-node');
 var ShopifyBuy = require('shopify-buy');
 
-
-
-
 const shopClient = ShopifyBuy.buildClient({
   apiKey: '365f1f4c8ba81b764b8345a6f46af6a2',
   appId: '6',
@@ -54,6 +51,10 @@ router.post('/addtocart', function (req, res, next) {
     .then(data => res.send(data))
     .catch(err => console.error(err))
 });
+
+router.post('/updatecart', function (req, res, next) {
+  
+})
 
 
 

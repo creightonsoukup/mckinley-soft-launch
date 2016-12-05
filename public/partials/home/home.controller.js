@@ -11,4 +11,12 @@
       return  $scope.view.toggle=""
       }
     }
+    $scope.view.boolChangeClass = false
+
+
+    $scope.view.goShopping = () => {
+      $location.path('/collection')
+    }
+
+
   })

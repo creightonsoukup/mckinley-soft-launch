@@ -5,7 +5,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var Shopify = require('shopify-api-node');
 var ShopifyBuy = require('shopify-buy');
 var session = require('express-session')
 

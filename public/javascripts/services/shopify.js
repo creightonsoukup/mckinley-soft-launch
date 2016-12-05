@@ -1,52 +1,57 @@
 angular.module('MyApp')
 
-  .service('shopifyService', function ($http, $q) {
+  .service('shopifyService', function ($http, $q, $location) {
       this.data = {}
-      this.data.cart
-      this.data.product
-      this.data.cartLineItemCount
+      this.data.products = []
+      this.data.cart = {}
+      this.data.cartLineItemCount = {}
+      this.data.cartLineItemsIds = []
+
+      const shopClient = ShopifyBuy.buildClient({
+        apiKey: '365f1f4c8ba81b764b8345a6f46af6a2',
+        appId: '6',
+        domain: 'madison-mckinley-designs-pre-launch.myshopify.com'
+      });
 
       this.getCart = () => {
-        if(localStorage.getItem('MckinleyCartId')) {
-          var cartId = localStorage.getItem('MckinleyCartId')
-          $http.post('/retrievecart', {cartId: cartId})
-            .success((remotecart) => {console.log(remotecart)})
-          // this.data.cartLineItemCount = this.data.cart.attrs.lineItems.length;
+          if(localStorage.getItem('MckinleyCartId')) {
+            var cartId = localStorage.getItem('MckinleyCartId')
+            return shopClient.fetchRecentCart(cartId)
+          } else {
+            return shopClient.createCart()
+          }
+      }
 
-        } else {
-          $http.get('/newcart')
-            .then((newCart) => {
-              this.data.cart = newCart
+      this.requestAddToCart = (variantObj, quantity) => {
+          return this.data.cart.createLineItemsFromVariants({variant: variantObj, quantity: quantity})
+            .then((remoteCart) => {
+              this.data.cart = remoteCart
               console.log(this.data.cart)
-              localStorage.setItem('MckinleyCartId', this.data.cart.data["attrs"]["shopify-buy-uuid"])
             })
+      }
+
+      this.updateCart = (remoteCart) => {
+        this.data.cart = remoteCart
+      }
+
+      this.getProducts = () => shopClient.fetchAllProducts()
+
+      this.getSingleProduct = (id) => shopClient.fetchProduct(id)
+
+      this.emptyCart = () => this.data.cart.clearLineItems()
+
+      this.removeItem = (itemId) => this.data.cart.removeLineItem(itemId)
+
+      this.updateItem = (itemId, quantity) => this.data.cart.updateLineItem(itemId, quantity)
+
+      this.setStorage = (remoteCart) => {
+        var cart = remoteCart
+        if (!localStorage.getItem('MckinleyCartId')) {
+          var cart = remoteCart
+          cart.id = cart["attrs"]["shopify-buy-uuid"]
+          localStorage.setItem('MckinleyCartId', cart.id)
+        } else {
+          console.log('else')
         }
       }
-
-      this.requestAddToCart = (variant, quantity) => {
-        return $http({
-          url: 'http://localhost:8000/addtocart',
-          data: {
-            variant: variant,
-            quantity: quantity
-          },
-          method: "POST"
-        })
-      }
-
-      this.getProducts = () => $http.get('http://localhost:8000/products')
-
-      this.getSingleProduct = (id) => $http.get('http://localhost:8000/singleproduct/' + id)
-
-
-
-      // this.addToCart = ()
-
-    //function to update cart item
-
-    //function to delete cart item
-
-    //function to checkout Url
-
-    //function to get cart items
   })

@@ -1,28 +1,28 @@
-angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate', 'ui.bootstrap'])
+angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate'])
 
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/javascripts/home/home.template.html',
+        templateUrl: '/partials/home/home.template.html',
         controller: 'Home'
       })
       .when('/collection', {
-        templateUrl: '/javascripts/collection/collection.template.html',
+        templateUrl: '/partials/collection/collection.template.html',
         controller: 'Collection'
       })
       .when('/about', {
         controller: 'About',
-        templateUrl: '/javascripts/about/about.template.html',
+        templateUrl: '/partials/about/about.template.html',
         controllerAs: 'vm'
 
       })
       .when('/cart', {
         controller: 'Cart',
-        tempateUrl: '/javascripts/cart/cart.template.html'
+        templateUrl: '/partials/cart/cart.template.html'
       })
       .when('/product/:id', {
         controller: 'SingleProduct',
-        templateUrl: '/javascripts/singleproduct/singleproduct.template.html'
+        templateUrl: '/partials/singleproduct/singleproduct.template.html'
       })
     $locationProvider.html5Mode(true);
 

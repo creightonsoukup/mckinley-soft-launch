@@ -1,0 +1,89 @@
+<div ng-class="view.toggle" id="site-wrapper">
+  <div id="site-canvas">
+    <gs-nav-bar></gs-nav-bar>
+    <div class="container">
+      <div class="row">
+        <div class="12 columns">
+          <h1 class="cart-header">Cart</h1>
+        </div>
+      </div>
+      <div>
+
+      </div>
+      <div class="row cart-product-headers">
+        <div class="five columns">
+          <h5>Piece</h5>
+        </div>
+        <div class="two columns">
+          <h5>Price</h5>
+        </div>
+        <div class="two columns">
+          <h5>Quantity</h5>
+        </div>
+        <div class="two columns">
+          <h5>Subtotal</h5>
+        </div>
+        <div class="one colum">
+
+        </div>
+      </div>
+      <div  ng-repeat="n in view.lineItems track by $index">
+        <div class="five columns">
+          <p>{{n.attrs.variant_title}}</p>
+        </div>
+        <div class="two columns">
+          <p>{{n.price | currency}}</p>
+        </div>
+        <div class="two columns">
+          <!-- <select class="" name="" ng-model="">
+            <option placeholder value="{{n.quantity}}">{{n.quantity}}</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> -->
+
+            <p>{{n.quantity}}</p>
+        </div>
+        <div class="two columns">
+          <p>{{n.line_price | currency}}</p>
+        </div>
+        <div class="one column update-buttons">
+          <button type="button" ng-show="view.update">Update</button>
+          <button type="button" ng-show="view.show"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="12 columns cart-footer">
+          <h3>Total: {{view.cart}}</h3>
+        </div>
+      </div>
+      <div class="row cart-footer">
+        <a href="{{view.checkoutUrl}}"><button>Checkout</button></a>
+        <button ng-click="view.removeCart()">Clear Cart</button>
+        <button>Update Cart</button>
+        <a href="/#/collection"><button>Keep Shopping</button></a>
+      </div>
+
+    </div>
+    <div id="site-menu">
+      <div id="menu-quote">
+        <p id="menu-quote-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>~Madison McKinley</p>
+      </div>
+      <img ng-src="../../images/Anvil2.png" alt="">
+      <div class="menu-social-icons">
+        <h1><a href="https://www.instagram.com/madisonmckinleydesigns/"><i class="fa fa-instagram" aria-hidden="true"></i></a></h1>
+        <h1><a href="https://www.facebook.com/Madison-Mckinley-Designs-104141666686791/"><i class="fa fa-facebook" aria-hidden="true"></i></a></h1>
+        <h1><a href="https://www.pinterest.com/madisonmcki2054/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></h1>
+        <h1><a data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></h1>
+      </div>
+      <h3>Join The Mailing List</h3>
+      <form class="menu-signup"  method="post">
+        <input type="text">
+        <input type="submit">
+      </form>
+    </div>
+  </div>
+</div>

@@ -2,21 +2,33 @@ angular.module('MyApp')
 
   .controller('SingleProduct', function ($scope, $location, $http, $routeParams, shopifyService) {
     $scope.view = {}
+    $scope.view.cart = {}
+    shopifyService.getCart()
+      .then((remoteCart) => {
+        $scope.view.cart = remoteCart
+        $scope.$apply()
+        shopifyService.updateCart(remoteCart)
+      })
+    // $scope.$watch('shopifyService.data.cart', function () {
+    //   $scope.view.cart = shopifyService.data.cart
+    // })
     $scope.view.id = $routeParams.id
+
+
     shopifyService.getSingleProduct($scope.view.id)
       .then((data) => {
-        console.log(data)
-        $scope.view.product = data.data
+        $scope.view.product = data
+        $scope.$apply()
         $scope.view.variant = $scope.view.product["attrs"]["variants"][0]
       })
       .catch(err => console.error(err))
-    $scope.view.addToCart = (variant, quantity) => {
-      shopifyService.requestAddToCart(variant, quantity)
-        .success(function(remoteCart) {
-          shopifyService.data.cart = remoteCart
-          
-        })
+    $scope.view.quantity = 1;
+    $scope.view.addToCart = (quantity) => {
+      shopifyService.requestAddToCart($scope.view.variant, quantity)
+      $location.path('/cart')
     }
+      // $scope.view.toggleClass()
+    
     $scope.view.toggle = ""
     $scope.view.toggleClass = () => {
       if ($scope.view.toggle === "") {
@@ -25,4 +37,5 @@ angular.module('MyApp')
       return  $scope.view.toggle=""
       }
     }
+
   })

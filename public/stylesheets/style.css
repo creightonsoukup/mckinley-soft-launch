@@ -154,6 +154,7 @@ position: relative;
 overflow: hidden;
 width: 100%;
 min-height: 100vh;
+
 }
 
 #site-canvas {
@@ -179,6 +180,9 @@ min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-shadow: 0 1px 1px #fff;
+  box-shadow: inset 0 0 5px #bb9872;
+
 
 }
 
@@ -771,13 +775,25 @@ button {
 .social-icons {
   display: flex;
   justify-content: space-around;
-  padding-left: 0;
+  padding-left: 15%;
+  padding-right: 15%
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 15%;
+  padding-right: 15%;
 
 }
 
 .social-icons i {
   justify-content: space-around;
   color: #bb9872;
+}
+
+.social-icons i:hover {
+  color: #a58461;
 }
 
 /* Larger than mobile */

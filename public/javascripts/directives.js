@@ -18,6 +18,12 @@ angular.module('MyApp')
       templateUrl: '../../partials/directives/gsFooter.html'
     }
   })
+  .directive('gsTerms', function () {
+    return {
+      retrict: 'E',
+      templateUrl: '../../partials/directives/gsTerms.html'
+    }
+  })
   .directive("scroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {

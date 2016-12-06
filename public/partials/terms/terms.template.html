@@ -1,26 +1,7 @@
-
-<div ng-class="view.toggle" id="site-wrapper">
+<div id="site-wrapper" ng-class="view.toggle">
   <div id="site-canvas">
-    <div id="single-product-container">
+    <div  class="navigation">
         <gs-nav-bar></gs-nav-bar>
-        <div class="single-product-display">
-          <div class="gallery">
-            <img ng-src="{{view.product.attrs.images[0].src}}" alt="">
-          </div>
-          <div class="product-info">
-            <h2>{{view.product.attrs.title}}</h1>
-            <h2>{{view.product["attrs"]["variants"][0]["price"]}}</h2>
-            <div class="product-buttons">
-              <form name="addToCartForm" ng-submit="view.addToCart(1)">
-                <input id="submit" type="submit" value="add to cart">
-              </form>
-              <button ng-click="view.showProductDetails()">{{view.buttonText}}</button>
-            </div>
-            <div class="product-details" ng-hide="showDetails" >
-              <p ng-bind-html="view.product.description"></p>
-            </div>
-          </div>
-        </div>
     </div>
     <div id="site-menu">
       <div id="menu-quote">
@@ -39,6 +20,7 @@
         <input type="text">
         <input type="submit">
       </form>
+
     </div>
   </div>
 </div>

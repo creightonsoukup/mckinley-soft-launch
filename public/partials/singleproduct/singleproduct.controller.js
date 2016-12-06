@@ -20,6 +20,7 @@ angular.module('MyApp')
         $scope.view.product = data
         $scope.$apply()
         $scope.view.variant = $scope.view.product["attrs"]["variants"][0]
+        $scope.view.description = $scope.view.product.description
       })
       .catch(err => console.error(err))
     $scope.view.quantity = 1;
@@ -28,7 +29,7 @@ angular.module('MyApp')
       $location.path('/cart')
     }
       // $scope.view.toggleClass()
-    
+
     $scope.view.toggle = ""
     $scope.view.toggleClass = () => {
       if ($scope.view.toggle === "") {
@@ -36,6 +37,19 @@ angular.module('MyApp')
       } else {
       return  $scope.view.toggle=""
       }
+    }
+
+    $scope.view.showDetails = true
+    $scope.view.buttonText = "Show Details"
+    $scope.view.showProductDetails = () => {
+      if ($scope.view.showDetails === true ) {
+        $scope.view.showDetails = false
+        $scope.view.buttonText = "Hide Details"
+      } else {
+        $scope.view.showDetails = true
+        $scope.view.buttonText = "Show Details"
+      }
+
     }
 
   })

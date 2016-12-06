@@ -8,7 +8,7 @@
         <div ng-mouseenter="n.showDetails=true" ng-mouseleave="n.showDetails = false" class="products" ng-repeat="n in view.products track by $index">
             <a href="/#/product/{{n.attrs.product_id}}"><img id="product-shots" ng-src="{{n.attrs.images[0].src}}" alt=""></a>
             <div class="product-hover">
-              <div ng-show="n.showDetails">
+              <div id="show-details"ng-show="n.showDetails">
                 <a href="/#/product/{{n.attrs.product_id}}">
                 <p>{{n.attrs.title}}</p>
                 </a>

@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate'])
+angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate', 'ngSanitize'])
 
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -23,6 +23,10 @@ angular.module('MyApp', ['ngRoute', 'ngMessages', 'fullPage.js', 'ngAnimate'])
       .when('/product/:id', {
         controller: 'SingleProduct',
         templateUrl: '/partials/singleproduct/singleproduct.template.html'
+      })
+      .when('/terms', {
+        controller: 'Terms',
+        templateUrl: 'partials/terms/terms.template.html'
       })
     $locationProvider.html5Mode(true);
 

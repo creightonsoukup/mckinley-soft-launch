@@ -57,6 +57,11 @@ background: #f4eace;
 
 #product-shots {
   max-width: 350px;
+  transition: max-width 1s ease;
+}
+
+#product-shots:hover {
+  max-width: 370px;
 }
 
 .gallery {
@@ -75,12 +80,49 @@ background: #f4eace;
   align-items: center;
 }
 
-.product-info h2 {
+.product-info {
   font-size: 1.5rem;
+  transition: .5s ease;
+}
+
+.product-info h2 {
+  color: #bb9872;
 }
 
 .product-info #quantity {
   width: 75px;
+}
+
+.product-info button {
+  display: inline-block;
+  border: 1px;
+  border-style: solid;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  color: #bb9872;
+}
+
+.product-info button:hover {
+  display: inline-block;
+  border: 1px;
+  border-style: solid;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  color: #a58461;
+}
+
+.product-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.product-buttons input {
+  color: #bb9872;
+  border-color: #bb9872;
+}
+
+.product-buttons input:hover {
+  color: #a58461;
+  border-color: #a58461;
 }
 
 .single-product-display {
@@ -96,7 +138,7 @@ background: #f4eace;
   background-image: url("../images/mads-cover.jpg");
   background-position: center;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   padding-right: 1px;
 }
 
@@ -104,20 +146,51 @@ background: #f4eace;
   width: 50%;
   height: 100%;
   padding-top: 10vh;
+
 }
 
-.madison-text h3 {
+
+
+.madison-text h3:hover {
+  display: inline-flex;
+
+
+}
+
+
+.madison-text h3  {
   padding-top: 5vh;
   padding-left: 10%;
   padding-right: 10%;
   font-size: 2rem;
-  color: #bb9872;
+  color: #a58461;
+
+
+}
+
+.madison-text a h3:hover {
+  display: inline-flex;
+  transition: font-size .5s ease;
+  font-size: 2.05rem;
+}
+
+.madison-text a  h3 {
+  padding-top: 5vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 2rem;
+  color: #a58461;
+  transition: font-size .5s ease;
 
 }
 
 .madison-text a {
-  color: #bb9872;
-  /*text-decoration: none;*/
+  color: #a58461;
+  text-decoration: none;
+}
+
+.madison-test a:hover {
+  font-size: 2.2rem;
 }
 
 .madison-text form {
@@ -127,7 +200,9 @@ background: #f4eace;
 
 .madison-text input {
   background-color: #f4eace;
-  border-color: #bb9872;;
+  border-color: #bb9872;
+  color: #bb9872;
+  transition: color 0.5s ease;
 }
 
 .madison-text input:focus {
@@ -138,6 +213,7 @@ background: #f4eace;
 .madison-text input:hover {
   background-color: #f4eace;
   border-color: #a58461;
+  color: #a58461;
 }
 
 
@@ -147,6 +223,7 @@ background: #f4eace;
     padding-left: 10%;
     padding-right: 10%;
     font-size: 1.5rem;
+    color: #bb9872;
 }
 
 #site-wrapper {
@@ -230,14 +307,20 @@ min-height: 100vh;
   margin-top: 5vh;
   color:#bb9872;
   font-size: 4rem;
+  transition: font-size 0.5s ease;
+
 }
 
 .menu-social-icons a {
   color:#bb9872;
+  padding-bottom: 2px;
 }
 
 .menu-social-icons a:hover {
     color:#a58461;
+    font-size: 4.2rem;
+    padding-bottom: 0px;
+
 }
 
 .menu-signup {
@@ -292,6 +375,8 @@ min-height: 100vh;
 .cart-footer h3 {
   font-size: 2rem;
 }
+
+
 
 #cart i {
   color: #B85741;
@@ -363,7 +448,7 @@ padding-top: 10vh;
 }
 
 #shopping {
-  width: 50%;
+  width: 50.05%;
 
 }
 
@@ -387,12 +472,18 @@ padding-top: 10vh;
 #shopping img {
   display: block;
   margin: 0 auto;
-  height: 35vh;
-  margin-bottom: 5vh;
+  height: 40vh;
+  margin-bottom: 3vh;
+  transition: height 0.5s ease;
+
+}
+
+#shopping img:hover {
+  height: 42vh;
 }
 
 #quote {
-  width: 50%;
+  width: 49.95%;
   background: #f4eace;
   text-align: center;
   display: flex;
@@ -480,7 +571,15 @@ padding-top: 10vh;
 
 .social-icons i {
   font-size: 4rem;
+  transition: font-size .5s ease;
   padding-top: 5px;
+
+}
+
+.social-icons i:hover {
+  font-size: 4.3rem;
+
+
 }
 
 .logo {
@@ -838,6 +937,7 @@ button {
     margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
+
   }
   .products {
     background-color: #FFFFFF;
@@ -845,9 +945,13 @@ button {
     width: 50%;
   }
 
+#show-details.ng-show {
+ transition: all linear 1s;
+}
   .product-hover {
     height: 15vh;
   }
+
 
   .gallery {
     display: flex;

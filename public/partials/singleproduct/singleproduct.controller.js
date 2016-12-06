@@ -3,6 +3,10 @@ angular.module('MyApp')
   .controller('SingleProduct', function ($scope, $location, $http, $routeParams, shopifyService) {
     $scope.view = {}
     $scope.view.cart = {}
+    $scope.view.isSelected = {}
+    $scope.view.productImages = []
+    $scope.view.currentImage
+    $scope.view.showGallery
     shopifyService.getCart()
       .then((remoteCart) => {
         $scope.view.cart = remoteCart
@@ -21,6 +25,16 @@ angular.module('MyApp')
         $scope.$apply()
         $scope.view.variant = $scope.view.product["attrs"]["variants"][0]
         $scope.view.description = $scope.view.product.description
+
+        for (var i = 0; i < $scope.view.product.images.length; i++) {
+          $scope.view.productImages.push($scope.view.product.images[i])
+
+        }
+        $scope.view.setPhotoCount()
+        $scope.view.currentImage = $scope.view.productImages[0].src
+        console.log($scope.view.productImages)
+        console.log($scope.view.showGallery)
+        $scope.$apply()
       })
       .catch(err => console.error(err))
     $scope.view.quantity = 1;
@@ -39,17 +53,42 @@ angular.module('MyApp')
       }
     }
 
-    $scope.view.showDetails = true
+    $scope.view.togglePhotoLeft = () => {
+      $scope.view.currentImage = $scope.view.productImages[0].src
+      $scope.view.isSelected.first = "current-selection"
+      $scope.view.isSelected.second = ""
+
+    }
+
+    $scope.view.togglePhotoRight = () => {
+      $scope.view.currentImage = $scope.view.productImages[1].src
+      $scope.view.isSelected.second = "current-selection"
+      $scope.view.isSelected.first = ""
+
+    }
+
+    $scope.view.setPhotoCount = () => {
+      if ($scope.view.productImages.length > 1) {
+        $scope.view.showGallery = true;
+      } else {
+        $scope.view.showGallery = false;
+      }
+    }
+
+    $scope.view.showDetails = false
     $scope.view.buttonText = "Show Details"
     $scope.view.showProductDetails = () => {
+      $scope.view.showDetails = !$scope.view.showDetails
       if ($scope.view.showDetails === true ) {
-        $scope.view.showDetails = false
         $scope.view.buttonText = "Hide Details"
       } else {
-        $scope.view.showDetails = true
         $scope.view.buttonText = "Show Details"
       }
 
     }
+
+    $scope.view.isSelected.first = "current-selection"
+    $scope.view.isSelected.second = ""
+
 
   })

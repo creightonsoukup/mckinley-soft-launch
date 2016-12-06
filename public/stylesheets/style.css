@@ -70,8 +70,22 @@ background: #f4eace;
 }
 
 .gallery img {
-  height: 50vh;
+  height: 60vh;
+  transition: .5s ease;
 
+}
+
+.selected-image {
+  display: inline;
+}
+
+.selected-image span {
+  color: #bb9872;
+}
+
+.current-selection i {
+  color: #a58461;
+  font-size: 1.7rem;
 }
 
 .product-info {
@@ -79,6 +93,7 @@ background: #f4eace;
   flex-direction: column;
   align-items: center;
 }
+
 
 .product-info {
   font-size: 1.5rem;
@@ -125,13 +140,37 @@ background: #f4eace;
   border-color: #a58461;
 }
 
+.product-details.ng-show-add {
+  transition:0.5s linear all;
+}
+
+.product-details p {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1.25rem;
+}
+
+.product-details h2 {
+  padding-left: 18%;
+}
+
+.product-details {
+  margin-bottom: 5vh;
+}
+
+.product-details.ng-hide-add{
+  transition:0.5s linear all;
+    display: block;
+
+}
+
 .single-product-display {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   align-self: flex-end;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 .madison {
@@ -140,6 +179,7 @@ background: #f4eace;
   background-size: cover;
   height: 100vh;
   padding-right: 1px;
+  opacity: .8;
 }
 
 .madison-text {
@@ -216,7 +256,10 @@ background: #f4eace;
   color: #a58461;
 }
 
-
+.gallery {
+  display: flex;
+  align-items: center;
+}
 
 
 .madison-text p {
@@ -224,6 +267,13 @@ background: #f4eace;
     padding-right: 10%;
     font-size: 1.5rem;
     color: #bb9872;
+}
+
+.gallery span {
+  font-size: 5rem;
+  margin-right: 40%;
+  margin-left: 40%;
+  color: #bb9872;
 }
 
 #site-wrapper {
@@ -250,6 +300,7 @@ min-height: 100vh;
   height: 100%;
   position: absolute;
   top: 0;
+  color: #bb9872;
   right: -400px;
   background: #f4eace;
   min-height: 100vh;
@@ -270,7 +321,9 @@ min-height: 100vh;
 
 
 #site-menu img {
-  height: 15vh;
+  height: 10vh;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
 
 }
 
@@ -290,6 +343,26 @@ min-height: 100vh;
   padding-right: 5%;
 }
 
+.terms {
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.terms h1 {
+  font-size: 3rem;
+  color: #bb9872;;
+}
+
+.terms h2 {
+  font-size: 2rem;
+  color: #bb9872;
+}
+
+.terms p {
+  font-size: 1.5rem;
+
+}
+
 #menu-quote img {
   align-self: center;
   flex-grow: none;
@@ -302,8 +375,8 @@ min-height: 100vh;
 }
 
 .menu-social-icons h1 {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 15%;
+  margin-left: 15%;
   margin-top: 5vh;
   color:#bb9872;
   font-size: 4rem;
@@ -332,6 +405,7 @@ min-height: 100vh;
   background-color: #f4eace;
   border-color: #bb9872;
   align-self: center;
+  color: #bb9872;
 
 }
 
@@ -617,6 +691,12 @@ padding-top: 10vh;
   text-decoration: none;
   padding-right: 5%;
   color: #B85741;
+}
+
+.nav-items:hover {
+  text-decoration: none;
+  padding-right: 5%;
+  color: #a8503c;
 }
 
 #hamburger i {
@@ -947,6 +1027,10 @@ button {
 
 #show-details.ng-show {
  transition: all linear 1s;
+}
+
+#show-details a {
+  color: #bb9872;
 }
   .product-hover {
     height: 15vh;

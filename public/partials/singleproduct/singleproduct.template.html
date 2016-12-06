@@ -5,18 +5,25 @@
         <gs-nav-bar></gs-nav-bar>
         <div class="single-product-display">
           <div class="gallery">
-            <img ng-src="{{view.product.attrs.images[0].src}}" alt="">
+            <span ng-click="view.togglePhotoLeft()" ng-show="view.showGallery"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+            <img ng-src="{{view.currentImage}}" alt="">
+            <span ng-click="view.togglePhotoRight()" ng-show="view.showGallery"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+          </div>
+          <div ng-show="view.showGallery" class="selected-image">
+            <span ng-click="view.togglePhotoLeft()" ng-class="view.isSelected.first"><i class="fa fa-circle" aria-hidden="true"></i></span>
+            <span ng-click="view.togglePhotoRight()" ng-class="view.isSelected.second"><i class="fa fa-circle" aria-hidden="true"></i></span>
           </div>
           <div class="product-info">
             <h2>{{view.product.attrs.title}}</h1>
-            <h2>{{view.product["attrs"]["variants"][0]["price"]}}</h2>
+            <h2>{{view.product["attrs"]["variants"][0]["price"] | currency}}</h2>
             <div class="product-buttons">
               <form name="addToCartForm" ng-submit="view.addToCart(1)">
                 <input id="submit" type="submit" value="add to cart">
               </form>
               <button ng-click="view.showProductDetails()">{{view.buttonText}}</button>
             </div>
-            <div class="product-details" ng-hide="showDetails" >
+            <div class="product-details" ng-show="view.showDetails" >
+              <h2>Details</h2>
               <p ng-bind-html="view.product.description"></p>
             </div>
           </div>

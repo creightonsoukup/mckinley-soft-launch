@@ -14,7 +14,7 @@
             <span ng-click="view.togglePhotoRight()" ng-class="view.isSelected.second"><i class="fa fa-circle" aria-hidden="true"></i></span>
           </div>
           <div class="product-info">
-            <h2>{{view.product.attrs.title}}</h1>
+            <h2>{{view.product.attrs.title}}</h2>
             <h2>{{view.product["attrs"]["variants"][0]["price"] | currency}}</h2>
             <div class="product-buttons">
               <form name="addToCartForm" ng-submit="view.addToCart(1)">

@@ -77,6 +77,8 @@ background: #f4eace;
 
 .selected-image {
   display: inline;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 .selected-image span {
@@ -170,7 +172,7 @@ background: #f4eace;
   align-items: center;
   justify-content: flex-end;
   align-self: flex-end;
-  padding-top: 5vh;
+  padding-top: 2vh;
 }
 
 .madison {
@@ -1043,7 +1045,7 @@ button {
   }
 
   .gallery img {
-    height: 50vh;
+    height: 45vh;
 
   }
 
@@ -1054,7 +1056,7 @@ button {
   }
 
   .product-info h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .product-info #quantity {

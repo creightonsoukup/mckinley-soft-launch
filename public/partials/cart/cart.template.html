@@ -17,52 +17,39 @@
         <div class="two columns">
           <h5>Price</h5>
         </div>
-        <div class="two columns">
+        <div class="three columns">
           <h5>Quantity</h5>
         </div>
         <div class="two columns">
           <h5>Subtotal</h5>
         </div>
-        <div class="one colum">
-
-        </div>
       </div>
       <div  ng-repeat="n in view.lineItems track by $index">
+        <div class="mouseenter" ng-mouseleave="n.lineItems.toggleTrash = false" ng-mouseover="n.lineItems.toggleTrash = true" >
         <div class="five columns">
           <p>{{n.attrs.variant_title}}</p>
         </div>
         <div class="two columns">
           <p>{{n.price | currency}}</p>
         </div>
-        <div class="two columns">
-          <!-- <select class="" name="" ng-model="">
-            <option placeholder value="{{n.quantity}}">{{n.quantity}}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select> -->
-
-            <p>{{n.quantity}}</p>
+        <div class="three columns edit">
+            <input type="number" ng-model="n.updateQuantity" value="{{n.quantity}}" placeholder="{{n.quantity}}">
+            <span ng-show="n.lineItems.toggleTrash" ng-click="view.updateQuantity(n.id,n.updateQuantity)">Update</span>
+            <span ng-click="view.removeCartItem(n.id)"ng-show="n.lineItems.toggleTrash"><i class="fa fa-times" aria-hidden="true"></i></span>
         </div>
-        <div class="two columns">
+        <div  class="two columns">
           <p>{{n.line_price | currency}}</p>
         </div>
-        <div class="one column update-buttons">
-          <button type="button" ng-show="view.update">Update</button>
-          <button type="button" ng-show="view.show"><i class="fa fa-times" aria-hidden="true"></i></button>
-        </div>
+
       </div>
+    </div>
       <div class="row">
         <div class="12 columns cart-footer">
-          <h3>Total: {{view.cart}}</h3>
+          <h3>Total: {{view.shoppingcart.subtotal | currency}}</h3>
         </div>
       </div>
       <div class="row cart-footer">
         <a href="{{view.checkoutUrl}}"><button>Checkout</button></a>
-        <button ng-click="view.removeCart()">Clear Cart</button>
-        <button>Update Cart</button>
         <a href="/#/collection"><button>Keep Shopping</button></a>
       </div>
 

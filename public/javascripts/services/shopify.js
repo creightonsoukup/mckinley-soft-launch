@@ -22,10 +22,11 @@ angular.module('MyApp')
           }
       }
 
-      this.requestAddToCart = (variantObj, quantity) => {
+      this.requestAddToCart = (variantObj, quantity, photoArray) => {
           return this.data.cart.createLineItemsFromVariants({variant: variantObj, quantity: quantity})
             .then((remoteCart) => {
               this.data.cart = remoteCart
+              this.data.photos = photoArray
               console.log(this.data.cart)
             })
       }

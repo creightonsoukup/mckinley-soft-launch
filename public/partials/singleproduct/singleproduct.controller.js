@@ -39,7 +39,7 @@ angular.module('MyApp')
       .catch(err => console.error(err))
     $scope.view.quantity = 1;
     $scope.view.addToCart = (quantity) => {
-      shopifyService.requestAddToCart($scope.view.variant, quantity)
+      shopifyService.requestAddToCart($scope.view.variant, quantity, $scope.view.photoArray)
       $location.path('/cart')
     }
       // $scope.view.toggleClass()

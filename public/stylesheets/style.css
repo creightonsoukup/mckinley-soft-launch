@@ -445,14 +445,28 @@ min-height: 100vh;
 .cart-footer button:hover {
   color: #a58461;
   border-color: #a58461;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .cart-footer h3 {
   font-size: 2rem;
 }
 
+.edit input {
+  width: 70px;
+}
 
+.edit span {
+  padding-left: 2px;
+}
+
+.edit input:focus {
+  border-color: #bb9872;
+}
+
+.edit input::-webkit-input-placeholder {
+  color:black;
+}
 
 #cart i {
   color: #B85741;
@@ -1026,6 +1040,10 @@ button {
     text-align: center;
     width: 50%;
   }
+  .edit i{
+    display: inline;
+    font-size: 2rem;
+  }
 
 #show-details.ng-show {
  transition: all linear 1s;
@@ -1046,13 +1064,16 @@ button {
 
   .gallery img {
     height: 45vh;
-
   }
 
   .product-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .edit {
+    display: inline;
   }
 
   .product-info h2 {

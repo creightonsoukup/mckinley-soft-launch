@@ -26,6 +26,11 @@ body {
 
 }
 
+.navb-header a:hover {
+  color: #a04a36;
+
+}
+
 .navb-header img {
   height: 2vh;
   margin-right: auto;
@@ -60,11 +65,22 @@ body {
   color: #B85741;
 }
 
+.nav-items:hover {
+  text-decoration: none;
+  color: #a04a36;
+}
+
+
 .navb i {
   position: absolute;
   right: 25px;
   margin-top: 4vh;
   font-size: 2.7rem;
+
+}
+
+.navb i:hover {
+  color: #a04a36;
 
 }
 

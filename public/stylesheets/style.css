@@ -1246,6 +1246,8 @@ button {
     display: flex;
     justify-content: center;
     padding-bottom: 1vh;
+    margin-left: 5%;
+
   }
   .navb img {
     height: 12vh;
@@ -1260,7 +1262,7 @@ button {
   }
 
   #about-link {
-    padding-left: 4vw;
+    padding-left: 6vw;
   }
 
   .navb i {
@@ -1449,6 +1451,10 @@ button {
 
   #title {
     text-align: center;
+  }
+
+  #about-link{
+    padding-left: 50px;
   }
 
 

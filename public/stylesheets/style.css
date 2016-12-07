@@ -1435,33 +1435,40 @@ button {
   #panel1 p {
     height: 75%;
     margin-top: 5vh;
-    font-size: 2vw;
+    font-size: 1rem;
     line-height: 3vh;
+    font-weight: bold;
+    width: 80%;
 
 
   }
   #panel2 p {
     height: 75%;
     margin-top: 5vh;
-    font-size: 2vw;
+    font-size: 1rem;
     line-height: 3vh;
+    font-weight: bold;
+    width: 80%;
 
 
   }
   #panel3 p {
     height: 75%;
-    margin-top: 5vh;
-    font-size: 2vw;
+    margin-top: 2vh;
+    font-size: 1rem;
     line-height: 3vh;
+    font-weight: bold;
+    width: 80%;
 
 
   }
   #panel4 p {
     height: 75%;
     margin-top: 5vh;
-    font-size: 2vw;
+    font-size: 1rem;
     line-height: 3vh;
-
+    font-weight: bold;
+    width: 80%;
 
   }
 
@@ -1478,7 +1485,9 @@ button {
     width: 30vw;
   }
 
-
+  #MERGE0 {
+    width: 200px;
+  }
 
 }
 

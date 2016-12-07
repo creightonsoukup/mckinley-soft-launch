@@ -328,6 +328,11 @@ min-height: 100vh;
 
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
 #site-menu h3 {
   padding-left: 5%;
   font-size: 2rem;

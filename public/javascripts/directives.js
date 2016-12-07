@@ -1,9 +1,9 @@
 angular.module('MyApp')
 
-  .directive('gsShoppingCart', function () {
+  .directive('gsSideBar', function () {
     return {
       restrict: 'E',
-      templateUrl: '../../partials/directives/gsShoppingCart.html'
+      templateUrl: '../../partials/directives/gsSideBar.html'
     }
   })
   .directive('gsNavBar', function () {

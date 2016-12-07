@@ -1,9 +1,10 @@
 angular.module('MyApp')
 
-  .controller('Collection', function ($scope, $location, $http, navigationService, shopifyService) {
+  .controller('Collection', function ($scope, $location, $http, navigationService, shopifyService, quotesService) {
     $scope.view = {}
     $scope.view.products
     $scope.view.update = true
+    $scope.view.quotes = quotesService.pickRandomQuote()
 
     shopifyService.getCart()
     shopifyService.getProducts()

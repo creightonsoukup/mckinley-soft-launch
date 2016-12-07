@@ -1,8 +1,9 @@
 angular.module('MyApp')
 
-  .controller('SingleProduct', function ($scope, $location, $http, $routeParams, shopifyService) {
+  .controller('SingleProduct', function ($scope, $location, $http, $routeParams, shopifyService, quotesService) {
     $scope.view = {}
     $scope.view.cart = {}
+    $scope.view.quotes = quotesService.pickRandomQuote()
     $scope.view.isSelected = {}
     $scope.view.productImages = []
     $scope.view.currentImage

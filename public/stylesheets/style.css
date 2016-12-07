@@ -1420,6 +1420,12 @@ button {
     margin-top: 8vh;
   }
 
+  .navb-logo img {
+    height: 6.5vh;
+    padding-top: 1vh;
+    margin-left:15%;
+  }
+
 
 
   #b_email {
@@ -1465,6 +1471,11 @@ button {
 
   #about-link{
     padding-left: 50px;
+  }
+
+  #cartposition {
+    padding-top: 8vh;
+    width: 20vw;
   }
 
 

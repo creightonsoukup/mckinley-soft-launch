@@ -5,6 +5,7 @@ body {
 
 .background-color {
   background: #f4eace;
+  height: 15vh;
 }
 
 .navb-header {
@@ -15,12 +16,13 @@ body {
   width: 100%;
   top: 0;
   z-index: 500;
+  padding-bottom: 2vh;
 }
 
 .navb-header a {
   position: absolute;
   right: 25px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
 }
 
@@ -28,6 +30,7 @@ body {
   height: 2vh;
   margin-right: auto;
   margin-left: auto;
+
 }
 
 .navb-logo {
@@ -39,7 +42,7 @@ body {
   position: absolute;
   left: 25px;
   margin-top: 4vh;
-  font-size: 1.7vw;
+  font-size: 1.5rem;
 }
 .navb {
   display: flex;
@@ -47,7 +50,8 @@ body {
   padding-bottom: 1vh;
 }
 .navb img {
-  height: 8vh;
+  height: 4vh;
+  margin-bottom: 2vh;
 
 }
 
@@ -236,15 +240,16 @@ background: #f4eace;
   background-image: url("../images/bottom-homepage.jpg");
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   padding-right: 1px;
   opacity: .8;
+  zoom: 75%;
 }
 
 .madison-text {
   width: 50%;
   height: 100%;
-  padding-top: 10vh;
+  padding-top: 3vh;
 
 }
 
@@ -257,13 +262,11 @@ background: #f4eace;
 
 
 .madison-text h3  {
-  padding-top: 5vh;
+  padding-top: 1vh;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 1.5vw;;
+  font-size: 1rem;
   color: #a58461;
-
-
 }
 
 .madison-text a h3:hover {
@@ -276,7 +279,7 @@ background: #f4eace;
   padding-top: 5vh;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #a58461;
   transition: font-size .5s ease;
 
@@ -303,6 +306,10 @@ background: #f4eace;
   transition: color 0.5s ease;
 }
 
+.madison-text input #b_email {
+  width: 100px;
+}
+
 .madison-text input:focus {
   background-color: #f4eace;
   border-color: #a58461;
@@ -323,7 +330,7 @@ background: #f4eace;
 .madison-text p {
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #bb9872;
 }
 
@@ -578,12 +585,12 @@ padding-top: 10vh;
   background-position: center;
   opacity: .80;
   display: flex;
-  height: 80vh;
+  height: 40vh;
 }
 
 .call-to-action {
   display: flex;
-  height: 70vh;
+  height: 40vh;
 
 }
 
@@ -625,7 +632,7 @@ padding-top: 10vh;
 #shopping img {
   display: block;
   margin: 0 auto;
-  height: 40vh;
+  height: 20vh;
   margin-bottom: 3vh;
   transition: height 0.5s ease;
 
@@ -637,7 +644,7 @@ padding-top: 10vh;
 
 #quote {
   width: 49.95%;
-  height: 70vh;
+  height: 40vh;
   background: #f4eace;
   text-align: center;
   display: flex;
@@ -651,7 +658,7 @@ padding-top: 10vh;
 
 #quote p {
   color: #bb9872;
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   padding-left: 10%;
   padding-right: 10%;
 
@@ -1176,6 +1183,159 @@ button {
     align-self: flex-end;
     padding-top: 10vh;
   }
+
+  .navb-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 1vh;
+    width: 100%;
+    top: 0;
+    z-index: 500;
+  }
+
+  .navb-header a {
+    position: absolute;
+    right: 25px;
+    font-size: 1.2rem;
+
+  }
+
+  .navb-header img {
+    height: 2vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .navb-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navb-links {
+    position: absolute;
+    left: 25px;
+    margin-top: 4vh;
+    font-size: 1.7vw;
+  }
+  .navb {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1vh;
+  }
+  .navb img {
+    height: 8vh;
+
+  }
+
+  .nav-items {
+    text-decoration: none;
+    color: #B85741;
+  }
+
+  .navb i {
+    position: absolute;
+    right: 25px;
+    margin-top: 4vh;
+    font-size: 2.7rem;
+
+  }
+
+  .call-to-action {
+    display: flex;
+    height: 70vh;
+
+  }
+
+  #homepage-load {
+    background-image: url("../images/homepage1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: .80;
+    display: flex;
+    height: 80vh;
+  }
+
+  #quote {
+    width: 49.95%;
+    height: 70vh;
+    background: #f4eace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*align-items: center;*/
+    align-content: center;
+    flex-grow:
+
+  }
+
+  #shopping img {
+    display: block;
+    margin: 0 auto;
+    height: 40vh;
+    margin-bottom: 3vh;
+    transition: height 0.5s ease;
+
+  }
+
+  #quote p {
+    color: #bb9872;
+    font-size: 1.8vw;
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+
+  .madison {
+    background-image: url("../images/bottom-homepage.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-right: 1px;
+    opacity: .8;
+    zoom: 100%;
+  }
+
+  .madison-text h3  {
+    padding-top: 5vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.5vw;;
+    color: #a58461;
+  }
+
+  .madison-text a  h3 {
+    padding-top: 5vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 2rem;
+    color: #a58461;
+    transition: font-size .5s ease;
+
+  }
+  .madison-text {
+    width: 50%;
+    height: 100%;
+    padding-top: 10vh;
+
+  }
+
+  .madison-text p {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 1.5rem;
+      color: #bb9872;
+  }
+
+  .madison-text input #b_email {
+    background-color: #f4eace;
+    border-color: #bb9872;
+    color: #bb9872;
+    transition: color 0.5s ease;
+    width: 50%;
+  }
+
 }
 
 /* Larger than desktop */

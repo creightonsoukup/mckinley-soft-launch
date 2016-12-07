@@ -505,25 +505,6 @@ min-height: 100vh;
   justify-content: flex-end;
 }
 
-#homepage-image-top img {
-  flex-shrink: 0;
-   min-width: 100%;
-   min-height: 100%;
-   zoom: 75%;
-   opacity: .75;
-}
-
-#homepage-image-top {
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: absolute;
-  opacity: .75;
-
-}
 
 #logo-home {
 height: 20vh;
@@ -535,9 +516,11 @@ padding-top: 10vh;
 }
 
 #homepage-load {
+  background-image: url("../images/homepage1.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .80;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 80vh;
 }
 

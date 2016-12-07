@@ -1241,6 +1241,7 @@ button {
     left: 25px;
     margin-top: 4vh;
     font-size: 1.7vw;
+    width: 30%;
   }
   .navb {
     display: flex;
@@ -1249,10 +1250,17 @@ button {
     margin-left: 5%;
 
   }
-  .navb img {
+  .navb a {
     height: 12vh;
     top: 1vh;
-    margin-right: 100%;
+    padding-right: 3%;
+
+  }
+
+  .navb img {
+    height: 12vh;
+
+
 
   }
 
@@ -1262,7 +1270,7 @@ button {
   }
 
   #about-link {
-    padding-left: 6vw;
+    padding-left: 5vw;
   }
 
   .navb i {

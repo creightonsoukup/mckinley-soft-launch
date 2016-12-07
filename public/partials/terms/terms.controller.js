@@ -1,8 +1,16 @@
 angular.module('MyApp')
 
-  .controller('Terms', function ($scope, quotesService) {
+  .controller('Terms', function ($scope, quotesService, shopifyService) {
     $scope.view = {}
     $scope.view.quotes = quotesService.pickRandomQuote()
+    $scope.view.itemsInCart
+    shopifyService.getCart()
+      .then((data) => {
+        $scope.view.itemsInCart = data.lineItemCount
+        $scope.$apply()
+        shopifyService.updateCart(data)
+      })
+
     _this.toggle = ""
     _this.toggleClass = () => {
       if (_this.toggle === "") {

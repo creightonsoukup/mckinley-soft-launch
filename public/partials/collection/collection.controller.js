@@ -5,8 +5,14 @@ angular.module('MyApp')
     $scope.view.products
     $scope.view.update = true
     $scope.view.quotes = quotesService.pickRandomQuote()
+    $scope.view.itemsInCart
 
     shopifyService.getCart()
+      .then((data) => {
+        $scope.view.itemsInCart = data.lineItemCount
+        $scope.$apply()
+        shopifyService.updateCart(data)
+      })
     shopifyService.getProducts()
      .then((data) => {
        $scope.view.products = data

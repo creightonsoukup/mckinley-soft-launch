@@ -1,10 +1,18 @@
 angular.module('MyApp')
 
-  .controller('About', function ($scope, $location, quotesService) {
+  .controller('About', function ($scope, $location, quotesService, shopifyService) {
 
     var _this = this;
 
     $scope.view = {}
+    $scope.view.itemsInCart
+
+    shopifyService.getCart()
+      .then((remoteCart) => {
+        $scope.view.itemsInCart = remoteCart.lineItemCount
+        $scope.$apply()
+        shopifyService.updateCart(remoteCart)
+      })
 
     _this.someOptions = {
       navigation: true,

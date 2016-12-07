@@ -8,9 +8,11 @@ angular.module('MyApp')
     $scope.view.productImages = []
     $scope.view.currentImage
     $scope.view.showGallery
+    $scope.view.itemsInCart
     shopifyService.getCart()
       .then((remoteCart) => {
         $scope.view.cart = remoteCart
+        $scope.view.itemsInCart = data.lineItemCount
         $scope.$apply()
         shopifyService.updateCart(remoteCart)
       })

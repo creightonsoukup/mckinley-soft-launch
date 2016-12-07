@@ -7,11 +7,13 @@ angular.module('MyApp')
     $scope.view.lineItems
     $scope.view.checkoutUrl
     $scope.view.newQuantity
+    $scope.view.itemsInCart
     shopifyService.getCart()
       .then((remoteCart) => {
         $scope.view.shoppingcart = remoteCart
         $scope.view.lineItems = remoteCart.lineItems
         $scope.view.checkoutUrl = remoteCart.checkoutUrl
+        $scope.view.itemsInCart = remoteCart.lineItemCount
         shopifyService.setStorage(remoteCart)
         shopifyService.updateCart($scope.view.shoppingcart)
         console.log($scope.view.lineItems)
@@ -27,6 +29,7 @@ angular.module('MyApp')
         $scope.view.shoppingcart = remoteCart
         $scope.view.lineItems = remoteCart.lineItems
         $scope.view.checkoutUrl = remoteCart.checkoutUrl
+        $scope.view.itemsInCart = remoteCart.lineItemCount
         shopifyService.updateCart($scope.view.shoppingcart)
         for (var i = 0; i < $scope.view.lineItems.length; i++) {
           $scope.view.lineItems[i].updatedQuantity = $scope.view.lineItems[i].quantity;

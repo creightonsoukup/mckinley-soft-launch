@@ -322,9 +322,7 @@ background: #f4eace;
   transition: color 0.5s ease;
 }
 
-.madison-text input #b_email {
-  width: 100px;
-}
+
 
 .madison-text input:focus {
   background-color: #f4eace;
@@ -1386,6 +1384,10 @@ button {
 
   .background-color {
     height: 10vh;
+  }
+
+  #b_email {
+    width: 90%;
   }
 
 

@@ -17,7 +17,8 @@ angular.module('MyApp')
     _this.someOptions = {
       navigation: true,
       navigationPosition: 'right',
-      scrollingSpeed: 1000
+      scrollingSpeed: 1000,
+    
     }
     $scope.view.quotes = quotesService.pickRandomQuote()
     _this.toggle = ""

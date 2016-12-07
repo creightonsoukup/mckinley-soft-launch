@@ -5,7 +5,7 @@ body {
 
 .background-color {
   background: #f4eace;
-  height: 15vh;
+  height: 13vh;
 }
 
 .navb-header {
@@ -16,7 +16,7 @@ body {
   width: 100%;
   top: 0;
   z-index: 500;
-  padding-bottom: 2vh;
+
 }
 
 .navb-header a {
@@ -1243,7 +1243,7 @@ button {
     padding-bottom: 1vh;
   }
   .navb img {
-    height: 8vh;
+    height: 12vh;
 
   }
 

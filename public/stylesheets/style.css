@@ -1390,6 +1390,32 @@ button {
     width: 90%;
   }
 
+  #panel1 p {
+    height: 78%;
+    margin-top: 5vh;
+    font-size: 2vw;
+  }
+  #panel2 p {
+    height: 78%;
+    margin-top: 5vh;
+    font-size: 2vw;
+  }
+  #panel3 p {
+    height: 78%;
+    margin-top: 2vh;
+    font-size: 1.8vw;
+  }
+  #panel4 p {
+    height: 78%;
+    margin-top: 5vh;
+    font-size: 2vw;
+  }
+  #panel5 i {
+    height: 78%;
+    margin-top: 5vh;
+    font-size: 4vw;
+  }
+
 
 }
 

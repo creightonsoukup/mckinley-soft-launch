@@ -12,7 +12,7 @@ angular.module('MyApp')
     shopifyService.getCart()
       .then((remoteCart) => {
         $scope.view.cart = remoteCart
-        $scope.view.itemsInCart = data.lineItemCount
+        $scope.view.itemsInCart = remoteCart.lineItemCount
         $scope.$apply()
         shopifyService.updateCart(remoteCart)
       })

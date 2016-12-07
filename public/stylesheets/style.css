@@ -41,6 +41,7 @@ body {
 .navb-logo {
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .navb-links {
@@ -1222,11 +1223,18 @@ button {
     height: 2vh;
     margin-right: auto;
     margin-left: auto;
+
+  }
+
+  #main-logo {
+    height: 10vh;
+    padding-top: 1vh;
   }
 
   .navb-logo {
     margin-left: auto;
     margin-right: auto;
+    height: 3vh;
   }
 
   .navb-links {
@@ -1242,12 +1250,18 @@ button {
   }
   .navb img {
     height: 12vh;
+    top: 1vh;
+    margin-right: 100%;
 
   }
 
   .nav-items {
     text-decoration: none;
     color: #B85741;
+  }
+
+  #about-link {
+padding-left: 2vw;
   }
 
   .navb i {
@@ -1375,7 +1389,7 @@ button {
 
   .navb-header {
     position: absolute;
-    padding-top: 4vh;
+    padding-top: 8vh;
   }
 
   .navb-header img {
@@ -1383,8 +1397,19 @@ button {
   }
 
   .background-color {
-    height: 10vh;
+    height: 12vh;
   }
+
+  .navb-logo img{
+    margin-top: 5px;
+    height: 6vh;
+  }
+
+  .navb-links {
+    margin-top: 8vh;
+  }
+
+
 
   #b_email {
     width: 90%;
@@ -1410,11 +1435,11 @@ button {
     margin-top: 5vh;
     font-size: 2vw;
   }
-  #panel5 i {
-    height: 78%;
-    margin-top: 5vh;
-    font-size: 4vw;
+
+  #title {
+    text-align: center;
   }
+
 
 
 }

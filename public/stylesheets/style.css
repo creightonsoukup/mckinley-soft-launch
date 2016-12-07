@@ -176,7 +176,7 @@ background: #f4eace;
 }
 
 .madison {
-  background-image: url("../images/mads-cover.jpg");
+  background-image: url("../images/bottom-homepage.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -516,6 +516,7 @@ min-height: 100vh;
   align-items: center;
   overflow: hidden;
   position: absolute;
+  opacity: .75;
 
 }
 
@@ -855,9 +856,9 @@ padding-top: 10vh;
   opacity: .8;
 }
 
-#panel5 p {
+#panel5 .box {
   background-color: #f4eace;
-  opacity: .8;
+  opacity: .6;
   width: 65%;
   height: 35vh;
   margin-left: auto;
@@ -872,7 +873,38 @@ padding-top: 10vh;
   border-style: solid;
   margin-bottom: 0px;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.box img {
+  width: 95%;
+  opacity: 1;
+  margin-top: 3vh;
+}
+
+.social-about {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 60%;
+  padding-top: 5vh;
+  color: #bb9872;
+}
+
+.social-about i {
+  color: #bb9872;
+  font-size: 4.5vw;
+  transition: font-size 1s ease;
+
+}
+
+.social-about i:hover {
+  color: #a58461;
+  font-size: 4.7vw;
+}
+
+
 
 
 

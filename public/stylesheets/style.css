@@ -595,7 +595,7 @@ padding-top: 10vh;
 }
 
 #homepage-load {
-  background-image: url("../images/homepage1.jpg");
+  background-image: url("../images/wildhorses.jpg");
   background-size: cover;
   background-position: center;
   opacity: .80;
@@ -1218,22 +1218,18 @@ button {
 
   }
 
-  .navb-header img {
-    height: 2vh;
-    margin-right: auto;
-    margin-left: auto;
 
-  }
 
-  #main-logo {
+  /*#main-logo {
     height: 10vh;
     padding-top: 1vh;
-  }
+  }*/
 
   .navb-logo {
-    margin-left: auto;
-    margin-right: auto;
-    height: 3vh;
+    left: 32%;
+    position: absolute;
+    top: 2vh;
+
   }
 
   .navb-links {
@@ -1241,7 +1237,8 @@ button {
     left: 25px;
     margin-top: 4vh;
     font-size: 1.7vw;
-    width: 30%;
+    width: 25%;
+    padding-top: 3vh;
   }
   .navb {
     display: flex;
@@ -1250,15 +1247,17 @@ button {
     margin-left: 5%;
 
   }
-  .navb a {
-    height: 12vh;
-    top: 1vh;
-    padding-right: 3%;
 
+
+  #cartposition {
+    padding-top: 2vh;
+
+    position: absolute;
+    right: 2%;
   }
 
   .navb img {
-    height: 12vh;
+    height: 10vh;
 
   }
 
@@ -1276,8 +1275,11 @@ button {
     right: 25px;
     margin-top: 4vh;
     font-size: 2.7rem;
+    padding-top: 3vh;
 
   }
+
+
 
   .call-to-action {
     display: flex;
@@ -1286,7 +1288,7 @@ button {
   }
 
   #homepage-load {
-    background-image: url("../images/homepage1.jpg");
+    background-image: url("../images/wildhorses.jpg");
     background-size: cover;
     background-position: center;
     opacity: .80;

@@ -4,7 +4,7 @@
     $scope.view = {}
     $scope.view.quote = {}
     $http({
-      url: 'http://quotes.rest/quote?minlength=100&maxlength=300',
+      url: 'https://quotes.rest/quote?minlength=100&maxlength=300',
       method: 'GET',
       headers: {
         'Accept': 'application/json',

@@ -824,7 +824,6 @@ padding-top: 10vh;
   padding: 3% 3% 3% 3%;
   font-size: 1vw;
   line-height: 4vh;
-  line-height: 4vh;
   border-width: 5px;
   border-color: #bb9872;
   border-style: solid;
@@ -1416,24 +1415,36 @@ button {
   }
 
   #panel1 p {
-    height: 78%;
+    height: 75%;
     margin-top: 5vh;
     font-size: 2vw;
+    line-height: 3vh;
+
+
   }
   #panel2 p {
-    height: 78%;
+    height: 75%;
     margin-top: 5vh;
     font-size: 2vw;
+    line-height: 3vh;
+
+
   }
   #panel3 p {
-    height: 78%;
-    margin-top: 2vh;
-    font-size: 1.8vw;
-  }
-  #panel4 p {
-    height: 78%;
+    height: 75%;
     margin-top: 5vh;
     font-size: 2vw;
+    line-height: 3vh;
+
+
+  }
+  #panel4 p {
+    height: 75%;
+    margin-top: 5vh;
+    font-size: 2vw;
+    line-height: 3vh;
+
+
   }
 
   #title {

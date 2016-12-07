@@ -1357,6 +1357,40 @@ button {
 
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  .cart-product-headers {
+    display: none;
+  }
+
+  .lineprice {
+    display: none;
+  }
+
+  .navb i {
+    display: none;
+  }
+
+  .navb-header {
+    position: absolute;
+    padding-top: 4vh;
+  }
+
+  .navb-header img {
+    display: none;
+  }
+
+  .background-color {
+    height: 10vh;
+  }
+
+
+}
+
 /* Larger than desktop */
 /*@media (min-width: 1000px) {
 

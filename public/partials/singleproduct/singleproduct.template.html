@@ -18,7 +18,7 @@
             <h2 ng-if="view.inStock">{{view.product["attrs"]["variants"][0]["price"] | currency}}</h2>
             <h2 ng-show="!(view.inStock)">Out of Stock</h2>
             <div class="product-buttons">
-              <form name="addToCartForm" ng-submit="view.addToCart(1)">
+              <form ng-if="view.inStock" name="addToCartForm" ng-submit="view.addToCart(1)">
                 <input id="submit" type="submit" value="add to cart">
               </form>
               <button ng-click="view.showProductDetails()">{{view.buttonText}}</button>

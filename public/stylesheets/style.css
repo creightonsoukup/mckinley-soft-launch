@@ -436,7 +436,7 @@ min-height: 100vh;
 
 .terms h1 {
   font-size: 3rem;
-  color: #bb9872;;
+  color: #bb9872;
 }
 
 .terms h2 {
@@ -667,7 +667,6 @@ padding-top: 10vh;
   justify-content: space-around;
   /*align-items: center;*/
   align-content: center;
-  flex-grow:
 
 }
 
@@ -1306,7 +1305,6 @@ button {
     justify-content: space-around;
     /*align-items: center;*/
     align-content: center;
-    flex-grow:
 
   }
 
@@ -1341,7 +1339,7 @@ button {
     padding-top: 5vh;
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 1.5vw;;
+    font-size: 1.5vw;
     color: #a58461;
   }
 

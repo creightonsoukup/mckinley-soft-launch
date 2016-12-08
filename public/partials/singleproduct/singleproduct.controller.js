@@ -9,6 +9,7 @@ angular.module('MyApp')
     $scope.view.currentImage
     $scope.view.showGallery
     $scope.view.itemsInCart
+    $scope.view.inStock
     shopifyService.getCart()
       .then((remoteCart) => {
         $scope.view.cart = remoteCart
@@ -27,8 +28,8 @@ angular.module('MyApp')
         $scope.view.product = data
         $scope.$apply()
         $scope.view.variant = $scope.view.product["attrs"]["variants"][0]
+        $scope.view.inStock = $scope.view.product["attrs"]["variants"][0].available
         $scope.view.description = $scope.view.product.description
-
         for (var i = 0; i < $scope.view.product.images.length; i++) {
           $scope.view.productImages.push($scope.view.product.images[i])
 

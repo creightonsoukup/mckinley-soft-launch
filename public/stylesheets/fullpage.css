@@ -160,7 +160,7 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    height: 25px;;
+    height: 25px;
     width: 25px;
     background-image: url("../images/horseshoe64.png");
     margin: -2px 0 0 -2px;

@@ -6,7 +6,7 @@
         <div class="single-product-display">
           <div class="gallery">
             <span ng-click="view.togglePhotoLeft()" ng-show="view.showGallery"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
-            <img ng-src="{{view.currentImage}}" alt="">
+            <img ng-click="view.togglePhotoRight()" ng-src="{{view.currentImage}}" alt="">
             <span ng-click="view.togglePhotoRight()" ng-show="view.showGallery"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
           </div>
           <div ng-show="view.showGallery" class="selected-image">
@@ -15,7 +15,8 @@
           </div>
           <div class="product-info">
             <h2 id="title">{{view.product.attrs.title}}</h2>
-            <h2>{{view.product["attrs"]["variants"][0]["price"] | currency}}</h2>
+            <h2 ng-if="view.inStock">{{view.product["attrs"]["variants"][0]["price"] | currency}}</h2>
+            <h2 ng-show="!(view.inStock)">Out of Stock</h2>
             <div class="product-buttons">
               <form name="addToCartForm" ng-submit="view.addToCart(1)">
                 <input id="submit" type="submit" value="add to cart">

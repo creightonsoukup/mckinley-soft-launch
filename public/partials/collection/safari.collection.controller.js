@@ -8,21 +8,21 @@ angular.module('MyApp')
     $scope.view.itemsInCart
 
     shopifyService.getCart()
-      .then((data) => {
+      .then(function (data) {
         $scope.view.itemsInCart = data.lineItemCount
         $scope.$apply()
         shopifyService.updateCart(data)
       })
     shopifyService.getProducts()
-     .then((data) => {
+     .then(function (data) {
        $scope.view.products = data
        $scope.$apply()
        console.log($scope.view.products)
      })
-     .catch(err => console.error(err))
+     .catch(function (err) {console.error(err)})
 
     $scope.view.toggle = ""
-    $scope.view.toggleClass = () => {
+    $scope.view.toggleClass = function () {
       if ($scope.view.toggle === "") {
         return $scope.view.toggle="show-nav"
       } else {
